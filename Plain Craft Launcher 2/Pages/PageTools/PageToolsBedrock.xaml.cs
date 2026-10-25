@@ -1,5 +1,6 @@
 using System;
 using System.Windows;
+using System.Windows.Input;
 using PCL.Core.App.Localization;
 using PCL.Core.UI;
 
@@ -68,7 +69,7 @@ public partial class PageToolsBedrock
             HintService.Hint("启动失败，请确认基岩版仍处于已安装状态。", HintType.Error);
     }
 
-    private void BtnRefresh_Click(object sender, EventArgs e) => RefreshList();
+    private void BtnRefresh_Click(object sender, MouseButtonEventArgs e) => RefreshList();
 
-    private void BtnStore_Click(object sender, EventArgs e) => ModBedrock.OpenStore();
+    private void BtnStore_Click(object sender, MouseButtonEventArgs e) => ModBedrock.OpenStore();
 }
