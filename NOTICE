@@ -1,0 +1,27 @@
+PCLPLUSS
+Copyright (c) 2026 柯梁LZF
+
+本产品基于以下开源项目二次开发：
+
+1. PCL CE (Plain Craft Launcher Community Edition)
+   Copyright (c) PCL Community
+   https://github.com/PCL-Community/PCL-CE
+   Licensed under the Apache License, Version 2.0
+
+2. Plain Craft Launcher 2 (PCL2)
+   Copyright (c) 龙腾猫跃 (LTCat)
+   https://github.com/Meloong-Git/PCL
+
+本产品的部分图标、字体与第三方库版权归各自作者所有，
+完整第三方许可清单见程序内「设置 → 关于 → 许可与版权声明」
+以及 `Plain Craft Launcher 2/metadata.json`。
+
+修改说明：本项目对上游代码的修改详见 CHANGES.md。
+所有上游版权声明均被保留，未删除任何 NOTICE 内容。
+
+---
+
+This product includes software developed by PCL Community
+(https://github.com/PCL-Community/PCL-CE) and 龙腾猫跃
+(https://github.com/Meloong-Git/PCL), licensed under the
+Apache License, Version 2.0. See LICENSE for the full text.
