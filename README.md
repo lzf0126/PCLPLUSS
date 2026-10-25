@@ -13,6 +13,30 @@ PCLPLUSS 是 [PCL CE](https://github.com/PCL-Community/PCL-CE)（[PCL2](https://
 - **启动容错**：单例锁无法获取时降级为允许多开继续启动，而不是静默退出。
 - **可配置微软登录**：支持在运行时提供自己的 Azure 应用 Client ID，无需重新编译。
 
+## 运行
+
+发布包为**自包含版本**，无需安装 .NET 运行时：解压后双击 `PCLPLUSS.exe` 即可。
+
+### 首次运行：Windows SmartScreen 提示
+
+从网络下载的压缩包会带有「Mark-of-the-Web」标记，解压后运行未签名的 exe 时，Windows 可能提示：
+
+> Windows 已保护你的电脑
+> Microsoft Defender SmartScreen 阻止了无法识别的应用启动
+> 发布者：发布者未知
+
+这是**未做代码签名的正常现象**，不是病毒报告（本项目开源，可自行审计全部源码）。任选一种方式处理：
+
+1. 点弹窗里的 **「更多信息」→「仍要运行」**；
+2. **推荐**：右键下载的 zip 文件 → **属性** → 勾选 **「解除锁定」** → 确定，然后再解压，解压出的 exe 便不会触发该提示；
+3. 或在解压后的文件夹里双击 **`解除锁定.bat`**，一键清除整个文件夹的锁定标记。
+
+手动处理（PowerShell，在程序目录执行）：
+
+```powershell
+Get-ChildItem -Recurse | Unblock-File
+```
+
 ## 从源码构建
 
 环境要求：
