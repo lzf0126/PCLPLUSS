@@ -70,7 +70,9 @@ public partial class Application
             // 设置初始窗口
             if (Config.Preference.ShowStartupLogo)
             {
-                ModMain.frmStart = new SplashScreen(@"Images\icon.ico");
+                // PCLPLUSS：原先使用 icon.ico，WPF 会取其中最小帧，导致启动画面极小；
+                // 改为专用 200x200 PNG，尺寸稳定。
+                ModMain.frmStart = new SplashScreen(@"Images\Heads\Splash.png");
                 ModMain.frmStart.Show(false, true);
             }
 
