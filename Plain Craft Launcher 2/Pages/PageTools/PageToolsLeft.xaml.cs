@@ -1,4 +1,4 @@
-﻿using System.Windows;
+using System.Windows;
 using System.Windows.Controls;
 using PCL.Core.App;
 
@@ -104,6 +104,11 @@ public partial class PageToolsLeft
                 if (ModMain.frmToolsTest is null)
                     ModMain.frmToolsTest = new PageToolsTest();
                 return ModMain.frmToolsTest;
+            }
+            case FormMain.PageSubType.ToolsBedrock:
+            {
+                ModMain.frmToolsBedrock ??= new PageToolsBedrock();
+                return ModMain.frmToolsBedrock;
             }
             default:
             {

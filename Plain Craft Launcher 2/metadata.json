@@ -1,10 +1,10 @@
 {
   "name": "PCLPLUSS",
   "version": {
-    "base": "3.0.0",
+    "base": "3.1.0",
     "upstream": "2.12.1",
     "suffix": "",
-    "code": 1000
+    "code": 1010
   },
   "licenses": [
     {

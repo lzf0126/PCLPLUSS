@@ -46,3 +46,29 @@
 
 - 上游全部第三方库、资源文件、CI 流程保持原样。
 - 关于页 / NOTICE 中保留 PCL Community 与 龙腾猫跃 的版权信息。
+
+## v3.1.0（基岩版支持）
+
+新增文件：
+
+| 文件 | 说明 |
+|---|---|
+| `Plain Craft Launcher 2/Modules/Minecraft/ModBedrock.cs` | 基岩版检测与启动：通过 `Get-AppxPackage` 读取 AppX 包信息（名称 / 版本 / 架构 / 安装路径 / PackageFamilyName），失败时回退扫描 `%LOCALAPPDATA%\Packages`；通过 `shell:appsFolder\<AUMID>` 启动，失败回退 `minecraft://` 协议 |
+| `Plain Craft Launcher 2/Pages/PageTools/PageToolsBedrock.xaml(.cs)` | 新页面「工具 → 基岩版」：版本列表（UWP/GDK 区分）、启动、打开安装目录、重新扫描、打开 Microsoft Store |
+
+修改文件：
+
+| 文件 | 改动 |
+|---|---|
+| `FormMain.xaml.cs` | 新增子页面枚举 `ToolsBedrock = 5` |
+| `Modules/ModMain.cs` | 新增 `frmToolsBedrock` 页面引用 |
+| `Pages/PageTools/PageToolsLeft.xaml(.cs)` | 工具页侧边栏新增「基岩版」入口与页面路由 |
+| `metadata.json` / `csproj` | 版本号提升到 3.1.0（内部代号 1010） |
+
+修复：
+
+- `解除锁定.bat` 之前使用 LF 换行导致 cmd 解析失败，已改为 CRLF + GBK 编码，并加 `chcp 936`。
+
+说明：
+
+- v3.1 只做「启动已安装的基岩版」，不涉及 Xbox 登录与安装包导入（后续 v3.2 / v3.3）。

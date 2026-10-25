@@ -46,5 +46,17 @@
                           LogoScale="0.9"
                           SvgIcon="lucide/tool-case" />
 
+        <TextBlock Text="跨平台" Margin="13,5,5,3" Opacity="0.6" FontSize="12"
+                   x:Name="TextBedrockCategory" />
+        <local:MyListItem x:Name="ItemBedrock"
+                          IsScaleAnimationEnabled="False"
+                          Type="RadioBox" Tag="5"
+                          MinPaddingRight="35" Height="36"
+                          VerticalAlignment="Top"
+                          Title="基岩版"
+                          Check="PageCheck"
+                          LogoScale="0.85"
+                          SvgIcon="lucide/boxes" />
+
     </StackPanel>
 </local:MyPageLeft>

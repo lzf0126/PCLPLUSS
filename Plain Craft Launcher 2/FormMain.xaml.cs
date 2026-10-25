@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.IO;
 using System.Net;
 using System.Runtime.InteropServices;
@@ -1454,6 +1454,7 @@ public partial class FormMain
 
         ToolsGameLink = 1,
         ToolsTest = 3,
+        ToolsBedrock = 5,
 
         VersionOverall = 0,
         VersionSetup = 1,
